@@ -1,0 +1,27 @@
+/* extra font */
+@font-face {
+  font-family: "Dancing_Script";
+  src: url("../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf");
+  font-weight: "400";
+}
+
+/* title images */
+@font-face {
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico/Pacifico-Regular.ttf");
+  font-weight: "400";
+}
+
+/* title pages */
+@font-face {
+  font-family: "Righteous";
+  src: url("../fonts/Righteous/Righteous-Regular.ttf");
+  font-weight: "400";
+}
+
+/* content */
+@font-face {
+  font-family: "Urbanist";
+  src: url("../fonts/Urbanist/Urbanist-VariableFont_wght.ttf");
+  font-weight: "400";
+}

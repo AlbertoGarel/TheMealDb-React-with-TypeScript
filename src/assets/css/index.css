@@ -1,0 +1,11 @@
+@import "./themes.css";
+@import "./fonts.css";
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+.home {
+  font-family: "Pacifico";
+}
