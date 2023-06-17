@@ -1,0 +1,26 @@
+label {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+
+  #icon-search {
+    color: var(--outline-color-rgb);
+    font-size: 30px;
+  }
+
+  input {
+    max-width: 300px;
+    border: 1px solid var(--bg-color);
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 5px;
+
+    &:focus-visible {
+      outline: 1px solid var(--outline-color);
+    }
+
+    &:active {
+      background-color: var(--special-bg-color-rgb);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "../../assets/css/themes.css";
+
+.loader {
+  border: 10px solid var( --outline-color);
+  border-top: 10px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
