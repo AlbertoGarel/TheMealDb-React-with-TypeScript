@@ -6,6 +6,10 @@ import { AppCont } from "../../App";
 import big_burger from "../../assets/img/header/hamburguesa_big.png";
 import med_burger from "../../assets/img/header/hamburguesa_medium.png";
 import small_burger from "../../assets/img/header/hamburguesa_small.png";
+<<<<<<< HEAD
+=======
+import patron from '../../assets/img/header/patron_comida_small.png';
+>>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
 
 import "./Header.scss";
 import SearchBar from "../searchBar/SearchBar";
@@ -20,6 +24,7 @@ interface HeaderProps {
   handlerSearchValue: (param: number | string) => void;
 }
 
+<<<<<<< HEAD
 export default function Header({ handlerSearchValue }: HeaderProps) {
   const { breakpoint, deviceType } = useContext(AppCont);
 
@@ -27,6 +32,22 @@ export default function Header({ handlerSearchValue }: HeaderProps) {
     // @ts-ignore
     backgroundImage: images[deviceType],
     backgroundRepeat: "no-repeat",
+=======
+interface StyleTypes{
+  backgroundImage: string[]
+  backgroundRepeat: string[]
+  backgroundPosition: string
+  backgroundSize: number
+}
+
+export default function Header({ handlerSearchValue }: HeaderProps) {
+  const { breakpoint, deviceType } = useContext(AppCont);
+
+  const styleBackground: StyleTypes = {
+    // @ts-ignore
+    backgroundImage: [images[deviceType], `url("${patron}")`],
+    backgroundRepeat: ["no-repeat", 'repeat'],
+>>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
     backgroundPosition: "right bottom",
     backgroundSize: breakpoint / 2,
   };
@@ -34,6 +55,10 @@ export default function Header({ handlerSearchValue }: HeaderProps) {
   return (
     <header
       className="header"
+<<<<<<< HEAD
+=======
+      // @ts-ignored
+>>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
       style={{
         ...styleBackground,
         height: deviceType === "small" ? "50vh" : "100vh",
