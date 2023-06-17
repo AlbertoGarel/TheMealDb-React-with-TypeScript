@@ -2,14 +2,10 @@
 @import "../../assets/css/fonts.css";
 
 .categories {
-<<<<<<< HEAD
-=======
   h2 {
     text-align: center;
     margin: 40px 0;
   }
-
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
   .content-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -17,10 +13,7 @@
     padding: 5px;
 
     .image {
-<<<<<<< HEAD
       //   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-=======
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
       width: 100%;
       height: auto;
       overflow: hidden;
@@ -36,11 +29,8 @@
     }
 
     .image figcaption {
-<<<<<<< HEAD
       color: #555;
-=======
       color: var(--text-color);
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
       font-family: "Exo";
       height: 100%;
       left: 0;
@@ -83,26 +73,19 @@
     }
     .popover__content {
       opacity: 0;
-<<<<<<< HEAD
       visibility: hidden;
       position: absolute;
       left: -150px;
       transform: translate(0, 10px);
       background-color: #bfbfbf;
-=======
       display: none;
       position: absolute;
       transform: translate(0, 10px);
       background-color: var(--outline-color);
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
       padding: 1.5rem;
       box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
       width: auto;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
     .popover__content:before {
       position: absolute;
       z-index: -1;
@@ -111,31 +94,19 @@
       top: -8px;
       border-style: solid;
       border-width: 0 10px 10px 10px;
-<<<<<<< HEAD
-      border-color: transparent transparent #bfbfbf transparent;
-=======
       border-color: transparent transparent  var(--outline-color) transparent;
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
       transition-duration: 0.3s;
       transition-property: transform;
     }
     .popover__wrapper:hover .popover__content {
       z-index: 10;
       opacity: 1;
-<<<<<<< HEAD
-      visibility: visible;
-=======
       display: block;
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
       transform: translate(0, -20px);
       transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
     }
     .popover__message {
-<<<<<<< HEAD
-      text-align: center;
-=======
       text-align: justify;
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
     }
 
     h3 {
@@ -151,11 +122,7 @@
   }
 
   .card-categories {
-<<<<<<< HEAD
-    border: 2px solid black;
-=======
     border: 2px solid var(--border-color);
     padding: 5px;
->>>>>>> f849b6981dc41ce65d4493d47f32248404396edb
   }
 }
