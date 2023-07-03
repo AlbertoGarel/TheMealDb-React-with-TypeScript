@@ -4,20 +4,18 @@ import Navigation from "./navigation/Navigaton";
 import Header from "./components/header/Header";
 import useWindow from "./hooks/useWindow";
 import useCategories from "./hooks/useRequest";
-import {
-  FullCategories,
-  RandomMeals,
-} from "./types/request.d";
+import { Category, RandomMeal } from "./types/request.d";
 import Footer from "./components/footer/Footer";
 import { CATEGORIES, RANDOM } from "./const/const";
+import {HeaderConf } from './types/customLocation.d';
 
 export interface UseRequestRandomMeals {
-  meals: FullCategories | RandomMeals;
+  meals: Category[] | RandomMeal[] | [];
   randomLoad: boolean;
   randomError: string;
 }
 export interface UseRequestFullCategories {
-  categories: FullCategories | RandomMeals;
+  categories: Category[] | RandomMeal[] | [];
   load: boolean;
   error: string;
 }
@@ -62,10 +60,20 @@ function App() {
     randomError,
   };
   const [inputSerchValue, setInputSearchValue] = useState<string | number>("");
-
-  const handlerSearchValue = (param: string | number) => {
+  const [visibilityHeadAndFoot, setVisibilityHeadAndFoot] = useState<HeaderConf>({
+    isHidden: false,
+    height: "100vh",
+  });
+  const { isHidden, height } = visibilityHeadAndFoot;
+  const handlerSearchValue = (param: string | number): void => {
     setInputSearchValue(param);
   };
+
+  const getVisibilityOfHeaderAndFooter = (param: any): void => {
+    setVisibilityHeadAndFoot(param);
+  };
+
+  const headerSettings: HeaderConf = { isHidden, height };
 
   return (
     <AppCont.Provider
@@ -77,8 +85,13 @@ function App() {
       }}
     >
       <BrowserRouter>
-        <Header handlerSearchValue={handlerSearchValue} />
-        <Navigation />
+        <Header
+          handlerSearchValue={handlerSearchValue}
+          headerSettings={headerSettings}
+        />
+        <Navigation
+          getVisibilityOfHeaderAndFooter={getVisibilityOfHeaderAndFooter}
+        />
         <Footer />
       </BrowserRouter>
     </AppCont.Provider>

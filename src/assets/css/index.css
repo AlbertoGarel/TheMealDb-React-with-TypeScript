@@ -6,6 +6,10 @@
   --font-text: "Urbanist";
   --font-text-secondary: "Pacifico";
   --font-extra: "Dancing_Script";
+
+  --danger-color: #e24965;
+
+  --radius: 5px;
 }
 
 * {
@@ -14,20 +18,28 @@
   padding: 0;
 }
 
-#root{
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--bg-color);
 }
-
+a,
 p,
 span {
   font-family: var(--font-text);
-  color: var(--text-color)
+  color: var(--text-color);
+}
+
+a,
+span {
+  font-style: italic;
 }
 
 h1 {
   font-family: var(--font-extra);
+  color: var(--title-color);
+  text-shadow: 2px 2px 2px var(--light-color);
 }
 
 h2,
@@ -36,27 +48,43 @@ h4,
 h5,
 h6 {
   font-family: var(--font-title);
-  color: var(--text-soft-color)
+  color: var(--text-soft-color);
 }
 
-h2{
+h2 {
   font-size: 40px;
 }
 
-h3{
+h3 {
   font-size: 25px;
 }
 
-h4{
+h4 {
   font-size: 20px;
 }
 
-h5,h6{
+h5,
+h6 {
   font-size: 16px;
 }
 
+figcaption,
 span {
   font-style: italic;
+}
+
+figcaption {
+  text-align: center;
+  margin: 5px 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.two-rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 5px;
 }
 
 .velo {
@@ -66,4 +94,36 @@ span {
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.btn {
+  color: var(--text-color); /*Color texto */
+  background: var(--light-color); /* Eliminar color de fondo */
+  border: 2px solid var(--outline-color); /* Ancho de borde, estilo de línea y color */
+  border-radius: var(--radius); /* Esquinas redondeadas */
+  text-decoration: none;
+  text-transform: uppercase; /* Mayúsculas */
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  min-width: 150px;
+  margin: 40px auto;
+  display: block;
+}
+.btn1 {
+  background-color: var(--outline-color);
+  color: var(--subtle-color);
+  border: 2px solid var(--bg-color);
+}
+.btn1:hover {
+  background-color: var(--bg-color);
+  color: var(--special-color);
+  border-color: var(--special-color);
 }

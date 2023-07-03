@@ -4,23 +4,24 @@ label {
   gap: 10px;
 
   #icon-search {
-    color: var(--outline-color-rgb);
+    color: var(--title-color);
     font-size: 30px;
   }
 
   input {
     max-width: 300px;
-    border: 1px solid var(--bg-color);
-    background-color: transparent;
-    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-color);
+    border-radius: var(--radius);
     padding: 5px;
 
     &:focus-visible {
       outline: 1px solid var(--outline-color);
+      border-color: var(--title-color);
     }
 
     &:active {
-      background-color: var(--special-bg-color-rgb);
+      border-color: var(--text-color);
     }
   }
 }

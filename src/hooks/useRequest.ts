@@ -3,10 +3,13 @@ import { Category, Request, RandomMeal } from "../types/request.d";
 
 enum TypeCall {
   categories = 1,
-  meals
+  meals,
 }
-export default function useRequest(req: string, type: number): [request: Category[] | RandomMeal | [], load: boolean,  error: string] {
-  const [request, getRequest] = useState<Category[] | RandomMeal | []>([]);
+export const useRequest = (
+  req: string,
+  type: number
+): [Category[] | RandomMeal[] | [], boolean, string] => {
+  const [request, getRequest] = useState<Category[] | RandomMeal[] | []>([]);
   const [error, setError] = useState<string>("");
   const [load, setLoad] = useState<boolean>(false);
 
@@ -30,4 +33,6 @@ export default function useRequest(req: string, type: number): [request: Categor
   }, [forRequest]);
 
   return [request, load, error];
-}
+};
+
+export default useRequest;

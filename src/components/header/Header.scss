@@ -1,8 +1,8 @@
-@import "../../assets/css//themes.css";
+@import "../../assets/css/themes.css";
 
 .header {
   position: relative;
-  background-color: var(--bg-color);
+  background-color: var(--card-color);
   display: flex;
   flex-direction: column;
 
@@ -14,7 +14,6 @@
     z-index: 1;
 
     h1 {
-      color: red;
       font-size: 10vw;
       margin: 20px;
       font-family: var(--font-extra);

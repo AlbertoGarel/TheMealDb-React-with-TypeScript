@@ -10,4 +10,7 @@ export enum DeviceSize {
   small = "small",
 }
 
-
+export interface UseWindowTypes {
+  windowWidth: number;
+  deviceType: DeviceSize;
+}

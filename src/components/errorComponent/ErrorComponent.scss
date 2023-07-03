@@ -1,0 +1,10 @@
+#errorcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 0;
+
+    p{
+        color: var(--danger-color);
+    }
+}

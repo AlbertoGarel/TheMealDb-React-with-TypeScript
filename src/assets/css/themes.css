@@ -1,69 +1,51 @@
 [data-theme="light"] {
-  --bg-color: rgba(255, 255, 255, 1);
-  --text-color: rgba(48, 48, 48, 1);
-  --text-soft-color: rgba(74, 74, 74, 1);
-  --text-strong-color: rgba(74, 74, 74, 1);
-  --subtle-color: rgba(249, 249, 249, 1);
-  --border-color: rgba(231, 231, 231, 1);
-  --shadow-color: rgba(191, 191, 191, 1);
-  --input-color: rgba(255, 255, 255, 1);
-  --outline-color: rgba(228, 169, 180, 1);
-  --mark-color: rgba(115, 115, 115, 0.08);
-  --special-color: rgba(115, 115, 115, 1);
-  --special-bg-color: rgba(118, 118, 118, 1);
-  --special-text-color: rgba(255, 255, 255, 1);
-  --special-shadow-color: rgba(78, 78, 78, 1);
-  --special-mark-color: rgba(255, 255, 255, 0.08);
-  --light-color: rgba(243, 243, 243, 1);
-  --dark-color: rgba(71, 71, 71, 1);
-  --text-color-rgb: rgb(48, 48, 48);
-  --bg-color-rgb: rgb(255, 255, 255);
-  --subtle-color-rgb: rgb(249, 249, 249);
-  --special-color-rgb: rgb(115, 115, 115);
-  --special-text-color-rgb: rgb(255, 255, 255);
-  --special-bg-color-rgb: rgb(118, 118, 118);
-  --shadow-color-rgb: rgb(191, 191, 191);
-  --special-shadow-color-rgb: rgb(78, 78, 78);
-  --outline-color-rgb: rgb(228, 169, 180);
-  --dark-color-rgb: rgb(71, 71, 71);
-  --light-color-rgb: rgb(243, 243, 243);
-  --transparent-color: #e4a9b460;
+  --bg-color: #ffffff;
+  --card-color: #f5f5f5;
+  --title-color: #ff7b00;
+  --text-color: #27313d;
+  --text-soft-color: #444b53;
+  --text-strong-color: #4a4a4a;
+  --subtle-color: #333333;
+  --border-color: #cfd0d2;
+  --shadow-color: #abc1dc;
+  --input-color: #ffffff;
+  --outline-color: #9dc3eb;
+  --mark-color: #4784b614;
+  --special-color: #4784b6;
+  --special-bg-color: #eaeaea;
+  --special-text-color: #ffffff;
+  --special-shadow-color: #475b71;
+  --special-mark-color: #4784b660;
+  --light-color: #eef4fc;
+  --dark-color: #37485a;
 }
 
 [data-theme="dark"] {
-  --bg-color: rgba(32, 32, 32, 1);
-  --text-color: rgba(223, 223, 223, 1);
-  --text-soft-color: rgba(187, 187, 187, 1);
-  --text-strong-color: rgba(187, 187, 187, 1);
-  --subtle-color: rgba(36, 36, 36, 1);
-  --border-color: rgba(48, 48, 48, 1);
-  --shadow-color: rgba(0, 0, 0, 1);
-  --input-color: rgba(28, 28, 28, 1);
-  --outline-color: rgba(220, 134, 152, 1);
-  --mark-color: rgba(139, 139, 139, 0.08);
-  --special-color: rgba(139, 139, 139, 1);
-  --special-bg-color: rgba(99, 99, 99, 1);
-  --special-text-color: rgba(223, 223, 223, 1);
-  --special-shadow-color: rgba(30, 30, 30, 1);
-  --special-mark-color: rgba(223, 223, 223, 0.08);
-  --light-color: rgba(212, 212, 212, 1);
-  --dark-color: rgba(53, 53, 53, 1);
-  --text-color-rgb: rgb(223, 223, 223);
-  --bg-color-rgb: rgb(32, 32, 32);
-  --subtle-color-rgb: rgb(36, 36, 36);
-  --special-color-rgb: rgb(139, 139, 139);
-  --special-text-color-rgb: rgb(223, 223, 223);
-  --special-bg-color-rgb: rgb(99, 99, 99);
-  --shadow-color-rgb: rgb(0, 0, 0);
-  --special-shadow-color-rgb: rgb(30, 30, 30);
-  --outline-color-rgb: rgb(220, 134, 152);
-  --dark-color-rgb: rgb(53, 53, 53);
-  --light-color-rgb: rgb(212, 212, 212);
-  --transparent-color: #dc869860;
+  --bg-color: #1b1919;
+  --card-color: #2e2e2e;
+  --title-color: #308446;
+  --text-color: #ffffff;
+  --text-soft-color: #e7e7e7;
+  --text-strong-color: #b9b9b9;
+  --subtle-color: #f9f9f9;
+  --border-color: #b9b9b9;
+  --shadow-color: rgba(191, 191, 191, 1);
+  --input-color: rgba(255, 255, 255, 1);
+  --outline-color: #363849;
+  --mark-color: rgba(85, 85, 85, 0.08);
+  --special-color: rgba(85, 85, 85, 1);
+  --special-bg-color: rgba(88, 88, 88, 1);
+  --special-text-color: rgba(255, 255, 255, 1);
+  --special-shadow-color: rgba(49, 49, 49, 1);
+  --special-mark-color:#e6dddf;
+  --light-color: rgba(243, 243, 243, 1);
+  --dark-color: rgba(71, 71, 71, 1);
 }
 
 [data-theme="light_dark"] {
   --bg-color: rgba(32, 32, 32, 1);
+  --card-color: #f5f5f5;
+  --title-color: #ff7b00;
   --text-color: rgba(230, 221, 223, 1);
   --text-soft-color: rgba(196, 185, 187, 1);
   --text-strong-color: rgba(187, 187, 187, 1);
@@ -80,22 +62,12 @@
   --special-mark-color: rgba(230, 221, 223, 0.08);
   --light-color: rgba(250, 199, 212, 1);
   --dark-color: rgba(75, 44, 53, 1);
-  --text-color-rgb: rgb(230, 221, 223);
-  --bg-color-rgb: rgb(32, 32, 32);
-  --subtle-color-rgb: rgb(44, 33, 36);
-  --special-color-rgb: rgb(243, 74, 139);
-  --special-text-color-rgb: rgb(230, 221, 223);
-  --special-bg-color-rgb: rgb(184, 36, 99);
-  --shadow-color-rgb: rgb(0, 0, 0);
-  --special-shadow-color-rgb: rgb(45, 24, 30);
-  --outline-color-rgb: rgb(230, 127, 159);
-  --dark-color-rgb: rgb(75, 44, 53);
-  --light-color-rgb: rgb(250, 199, 212);
-  --outline-color: #e67f9f60;
 }
 
 [data-theme="pink"] {
   --bg-color: rgba(255, 255, 255, 1);
+  --card-color: #f5f5f5;
+  --title-color: #ff7b00;
   --text-color: rgba(79, 33, 48, 1);
   --text-soft-color: rgba(99, 65, 74, 1);
   --text-strong-color: rgba(74, 74, 74, 1);
@@ -112,22 +84,12 @@
   --special-mark-color: rgba(255, 255, 255, 0.08);
   --light-color: rgba(255, 240, 243, 1);
   --dark-color: rgba(101, 58, 71, 1);
-  --text-color-rgb: rgb(79, 33, 48);
-  --bg-color-rgb: rgb(255, 255, 255);
-  --subtle-color-rgb: rgb(255, 247, 249);
-  --special-color-rgb: rgb(255, 12, 133);
-  --special-text-color-rgb: rgb(255, 255, 255);
-  --special-bg-color-rgb: rgb(255, 41, 136);
-  --shadow-color-rgb: rgb(236, 175, 191);
-  --special-shadow-color-rgb: rgb(130, 79, 94);
-  --outline-color-rgb: rgb(248, 174, 194);
-  --dark-color-rgb: rgb(101, 58, 71);
-  --light-color-rgb: rgb(255, 240, 243);
-  --transparent-color: #f8aec260;
 }
 
 [data-theme="purple"] {
   --bg-color: rgba(255, 255, 255, 1);
+  --card-color: #f5f5f5;
+  --title-color: #ff7b00;
   --text-color: rgba(80, 32, 44, 1);
   --text-soft-color: rgba(100, 64, 71, 1);
   --text-strong-color: rgba(74, 74, 74, 1);
@@ -144,22 +106,12 @@
   --special-mark-color: rgba(255, 255, 255, 0.08);
   --light-color: rgba(255, 240, 242, 1);
   --dark-color: rgba(102, 58, 67, 1);
-  --text-color-rgb: rgb(80, 32, 44);
-  --bg-color-rgb: rgb(255, 255, 255);
-  --subtle-color-rgb: rgb(255, 248, 249);
-  --special-color-rgb: rgb(255, 27, 113);
-  --special-text-color-rgb: rgb(255, 255, 255);
-  --special-bg-color-rgb: rgb(255, 47, 118);
-  --shadow-color-rgb: rgb(235, 175, 186);
-  --special-shadow-color-rgb: rgb(129, 79, 90);
-  --outline-color-rgb: rgb(247, 174, 188);
-  --dark-color-rgb: rgb(102, 58, 67);
-  --light-color-rgb: rgb(255, 240, 242);
-  --transparent-color: #f8aec260;
 }
 
 [data-theme="blue"] {
   --bg-color: rgba(255, 255, 255, 1);
+  --card-color: #f5f5f5;
+  --title-color: #ff7b00;
   --text-color: rgba(39, 44, 89, 1);
   --text-soft-color: rgba(69, 72, 104, 1);
   --text-strong-color: rgba(74, 74, 74, 1);
@@ -176,16 +128,4 @@
   --special-mark-color: rgba(255, 255, 255, 0.08);
   --light-color: rgba(242, 243, 255, 1);
   --dark-color: rgba(61, 67, 116, 1);
-  --text-color-rgb: rgb(39, 44, 89);
-  --bg-color-rgb: rgb(255, 255, 255);
-  --subtle-color-rgb: rgb(249, 249, 254);
-  --special-color-rgb: rgb(100, 119, 255);
-  --special-text-color-rgb: rgb(255, 255, 255);
-  --special-bg-color-rgb: rgb(106, 124, 255);
-  --shadow-color-rgb: rgb(184, 188, 232);
-  --special-shadow-color-rgb: rgb(87, 91, 129);
-  --outline-color-rgb: rgb(185, 190, 247);
-  --dark-color-rgb: rgb(61, 67, 116);
-  --light-color-rgb: rgb(242, 243, 255);
-  --transparent-color: #b9bef760;
 }

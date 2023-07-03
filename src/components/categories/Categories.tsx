@@ -1,10 +1,11 @@
 
-import { Category, RandomMeal, FullCategories } from "../../types/request";
-import Spinner from "../microcomponents/Spinner";
+import { Category, RandomMeal } from "../../types/request";
+import ErrorComponent from "../errorComponent/ErrorComponent";
+import Spinner from "../microcomponents/spinner/Spinner";
 import "./Categories.scss";
 
 interface CategoriesProps {
-  categories: FullCategories | RandomMeal;
+  categories: Category[] | RandomMeal[];
   load: boolean;
   error: string;
 }
@@ -14,15 +15,25 @@ export default function Categories({
   load,
   error,
 }: CategoriesProps) {
+
+  if(error.length){
+    return <ErrorComponent error={error} site={'"Categories"'}/>
+  }
+
+  if(load){
+    return <Spinner/>
+  }
+  
   return (
     <div className="categories">
       <h2>Categories</h2>
       <div className="content-cards">
-        {/* {categories?.map((item: Category) => {
+        {categories.map((item) => {
           return (
             <div key={item?.idCategory} className="card-categories popover__wrapper">
               <figure className="image push">
-                <img src={item?.strCategoryThumb} alt={item?.strCategory} />
+                <img src={item?.strCategoryThumb != null ? item?.strCategoryThumb : undefined} 
+                alt={item?.strCategory !== null ? item?.strCategory : undefined} />
                 <figcaption onClick={() => alert(item.idCategory)}>
                   Go to {item?.strCategory}
                 </figcaption>
@@ -38,7 +49,7 @@ export default function Categories({
               </div>
             </div>
           );
-        })} */}
+        })}
       </div>
     </div>
   );
