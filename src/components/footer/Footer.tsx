@@ -1,5 +1,5 @@
 import logo_albertogarel from "../../assets/img/Logo_AlbertoGarel.png";
-import logo_themealdb from '../../assets/img/logo-small.png'
+import logo_themealdb from "../../assets/img/logo-small.png";
 import "./Footer.scss";
 
 export default function Footer() {

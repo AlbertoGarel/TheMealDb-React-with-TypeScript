@@ -49,6 +49,7 @@ h5,
 h6 {
   font-family: var(--font-title);
   color: var(--text-soft-color);
+  padding: 0 5px;
 }
 
 h2 {
@@ -83,6 +84,13 @@ figcaption {
 .two-rows {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 5px;
+}
+.wrapper-meals-search {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  /* grid-template-columns: min-content minmax(200px) auto; */
   gap: 15px;
   padding: 5px;
 }

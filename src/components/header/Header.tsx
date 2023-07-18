@@ -1,4 +1,5 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/img/logo-small.png";
 import robot from "../../assets/img/robot_api_header.png";
 import { AppCont } from "../../App";
@@ -19,7 +20,7 @@ const images: { large: string; medium: string; small: string } = {
 };
 
 interface HeaderProps {
-  handlerSearchValue: (param: number | string) => void;
+  handlerSearchValue: (param: string) => void;
   headerSettings: { isHidden: boolean; height: string };
 }
 
@@ -27,6 +28,7 @@ export default function Header({
   handlerSearchValue,
   headerSettings,
 }: HeaderProps) {
+  const navigate = useNavigate();
   const { breakpoint, deviceType } = useContext(AppCont);
   const { isHidden, height } = headerSettings;
   const styleBackground: { [key: string]: string | number | {} | string[] } = {
@@ -54,6 +56,7 @@ export default function Header({
         <div
           id="container-logo"
           style={{ width: deviceType === "small" ? "100%" : "30%" }}
+          onClick={() => navigate("/")}
         >
           <img src={logo} alt="Logo TheMealDb" id="header-logo" />
           <img src={robot} alt="Api word with robot" id="header-robot" />

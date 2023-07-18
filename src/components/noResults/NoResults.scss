@@ -1,0 +1,22 @@
+@import "../../assets/css/themes.css";
+
+#no-results {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 40px 0;
+
+  img {
+    display: flex;
+    width: calc(100vw / 3);
+    height: auto;
+  }
+
+  h6 {
+    margin: 40px 0;
+    color: var(--danger-color);
+  }
+}

@@ -7,7 +7,7 @@ import useCategories from "./hooks/useRequest";
 import { Category, RandomMeal } from "./types/request.d";
 import Footer from "./components/footer/Footer";
 import { CATEGORIES, RANDOM } from "./const/const";
-import {HeaderConf } from './types/customLocation.d';
+import { HeaderConf } from "./types/customLocation.d";
 
 export interface UseRequestRandomMeals {
   meals: Category[] | RandomMeal[] | [];
@@ -24,6 +24,8 @@ export interface AppContext {
   deviceType: string;
   full_categories: UseRequestFullCategories;
   random_meals: UseRequestRandomMeals;
+  multisearch: string;
+  categorySelected: string;
 }
 
 const initialValueContext: AppContext = {
@@ -39,6 +41,8 @@ const initialValueContext: AppContext = {
     randomLoad: false,
     randomError: "",
   },
+  multisearch: "",
+  categorySelected: "",
 };
 
 export const AppCont: React.Context<AppContext> = React.createContext(
@@ -59,13 +63,17 @@ function App() {
     randomLoad,
     randomError,
   };
-  const [inputSerchValue, setInputSearchValue] = useState<string | number>("");
-  const [visibilityHeadAndFoot, setVisibilityHeadAndFoot] = useState<HeaderConf>({
+  const [inputSearchValue, setInputSearchValue] = useState<string>("");
+  const [categorySelected, getCategorySelected] = useState<string>("");
+  const [visibilityHeadAndFoot, setVisibilityHeadAndFoot] = useState<
+    HeaderConf
+  >({
     isHidden: false,
     height: "100vh",
   });
+
   const { isHidden, height } = visibilityHeadAndFoot;
-  const handlerSearchValue = (param: string | number): void => {
+  const handlerSearchValue = (param: string): void => {
     setInputSearchValue(param);
   };
 
@@ -75,6 +83,10 @@ function App() {
 
   const headerSettings: HeaderConf = { isHidden, height };
 
+  const getNameCategorySelected = (value: string): void => {
+    getCategorySelected(value);
+  };
+
   return (
     <AppCont.Provider
       value={{
@@ -82,6 +94,8 @@ function App() {
         deviceType: deviceType,
         full_categories: full_categories,
         random_meals: random_meals,
+        multisearch: inputSearchValue,
+        categorySelected: categorySelected
       }}
     >
       <BrowserRouter>
@@ -91,6 +105,7 @@ function App() {
         />
         <Navigation
           getVisibilityOfHeaderAndFooter={getVisibilityOfHeaderAndFooter}
+          getNameCategorySelected={getNameCategorySelected}
         />
         <Footer />
       </BrowserRouter>

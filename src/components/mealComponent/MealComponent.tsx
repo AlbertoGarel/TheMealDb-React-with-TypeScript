@@ -2,18 +2,22 @@ import { Fragment } from "react";
 import { RandomMeal } from "../../types/request.d";
 import "./MealComponent.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faFontAwesome } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import {
   faUtensils,
   faMap,
   faWineGlass,
 } from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "react-router-dom";
+import BackButton from "../microcomponents/backButton";
 
 interface MealProps {
   item: RandomMeal;
 }
 export default function MealComponent({ item }: MealProps) {
-  const parsedItem = [item];
+  const parsedItem: RandomMeal[] = [item];
+  const { state } = useLocation();
+  const { prevPage } = state;
 
   const IngredientsAndMeasuresDATA = Object.keys(item).reduce(
     (acc: { ingredient: string | null; text: string | null }[], it: string) => {
@@ -56,6 +60,8 @@ export default function MealComponent({ item }: MealProps) {
           </span>
         </li>
       </ul>
+
+      <BackButton prevPage={prevPage} />
 
       <h2>{item.strMeal}</h2>
       {parsedItem.map((i) => {
