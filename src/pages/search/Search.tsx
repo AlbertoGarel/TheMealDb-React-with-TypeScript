@@ -30,7 +30,7 @@ export default function Search() {
   };
 
   if (spinner) {
-    return <LoaderdescriptionBox descriptionText={"serched meals..."} />;
+    return <LoaderdescriptionBox descriptionText={"searched meals..."} />;
   }
 
   if (Object.values(resultmultisearch).every((i) => i === null) && !noResultLetterSelected) {

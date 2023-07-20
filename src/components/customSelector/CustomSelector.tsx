@@ -36,7 +36,7 @@ export default function CustomSelector({
 
   return (
     <section id="theme-selector">
-      <div id="theme-selected" onClick={handlerVisible}>
+      <div role="button" id="theme-selected" onClick={handlerVisible}>
         <FontAwesomeIcon icon={faPalette} />
         <span>{themeSelected}</span>
         <span className="square" data-theme={themeSelected}></span>

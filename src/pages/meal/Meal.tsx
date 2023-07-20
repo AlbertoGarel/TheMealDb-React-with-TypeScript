@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import MealComponent from "../../components/mealComponent/MealComponent";
 import { useLocation, Navigate } from "react-router-dom";
+
 export default function Meal() {
   if (true) {
     <Navigate to={"*"} />;

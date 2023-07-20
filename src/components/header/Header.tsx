@@ -24,14 +24,14 @@ interface HeaderProps {
   handlerSearchValue: (param: string) => void;
   headerSettings: { isHidden: boolean; height: string };
   handlerSelectedTheme: (param: string) => void;
-  themeSelected: string
+  themeSelected: string;
 }
 
 export default function Header({
   handlerSearchValue,
   headerSettings,
   handlerSelectedTheme,
-  themeSelected
+  themeSelected,
 }: HeaderProps) {
   const navigate = useNavigate();
   const { breakpoint, deviceType } = useContext(AppCont);
@@ -45,6 +45,7 @@ export default function Header({
 
   return (
     <header
+      data-testid="header"
       className="header"
       style={{
         ...styleBackground,
@@ -60,7 +61,7 @@ export default function Header({
       <nav>
         <div
           id="container-logo"
-          style={{ width: deviceType === "small" ? "100%" : "30%"}}
+          style={{ width: deviceType === "small" ? "100%" : "30%" }}
           onClick={() => navigate("/")}
         >
           <img src={logo} alt="Logo TheMealDb" id="header-logo" />
@@ -68,9 +69,15 @@ export default function Header({
         </div>
         <div
           id="container-search"
-          style={{ width: deviceType === "small" ? "100%" : "60%", marginBottom: deviceType === "small" ? "5px" : "0px" }}
+          style={{
+            width: deviceType === "small" ? "100%" : "60%",
+            marginBottom: deviceType === "small" ? "5px" : "0px",
+          }}
         >
-          <CustomSelector handlerSelectedTheme={handlerSelectedTheme} themeSelected={themeSelected}/>
+          <CustomSelector
+            handlerSelectedTheme={handlerSelectedTheme}
+            themeSelected={themeSelected}
+          />
           <SearchBar handlerSearchValue={handlerSearchValue} />
         </div>
       </nav>

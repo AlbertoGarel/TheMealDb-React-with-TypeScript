@@ -18,7 +18,7 @@ export default function Category() {
   } = useSearchTool(categorySelected);
 
   if (!categorySelected) {
-    return navigate("/");
+    navigate("/");
   }
 
   if (error.length) {

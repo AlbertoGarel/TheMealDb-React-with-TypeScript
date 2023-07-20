@@ -8,7 +8,7 @@ interface NoResultProps{
 
 export default function NoResult({GetNoResultLetterSelected}: NoResultProps) {
   return (
-    <div id="no-results">
+    <div id="no-results" data-testid="no-results">
       <img src={image} alt="Robot of app" />
       <h6>No results found for this search</h6>
       <InitialsComponent GetNoResultLetterSelected={GetNoResultLetterSelected} />

@@ -4,7 +4,7 @@ import "./Footer.scss";
 
 export default function Footer() {
   return (
-    <section className="footer">
+    <section className="footer" data-testid="footer">
       <div id="footer-left">
         <h3>Created by Albertogarel 2023</h3>
         <img src={logo_albertogarel} alt="logo de Albertogarel" />
