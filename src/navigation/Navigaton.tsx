@@ -33,10 +33,6 @@ export default function Navigation({
   }, [multisearch]);
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", "light");
-  }, []);
-
-  useEffect(() => {
     getVisibilityOfHeaderAndFooter(hiddenHeadAndfooter);
   }, [hiddenHeadAndfooter]);
 

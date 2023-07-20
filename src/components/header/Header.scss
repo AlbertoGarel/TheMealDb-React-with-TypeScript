@@ -11,18 +11,18 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    z-index: 1;
 
     h1 {
       font-size: 10vw;
       margin: 20px;
       font-family: var(--font-extra);
       font-weight: bold;
+      text-align: center;
     }
   }
 
   nav {
-    background-color: transparent;
+    background-color: var(--nav-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -35,6 +35,8 @@
       padding: 10px;
       display: flex;
       align-items: end;
+      flex-direction: row;
+      justify-content: center;
 
       #header-logo {
         width: 150px;
@@ -51,6 +53,10 @@
     #container-search {
       padding: 0 10px;
       width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
   }
 }

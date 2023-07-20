@@ -71,6 +71,7 @@ function App() {
     isHidden: false,
     height: "100vh",
   });
+  const [themeSelected, getThemeSelected] = useState<string>("light");
 
   const { isHidden, height } = visibilityHeadAndFoot;
   const handlerSearchValue = (param: string): void => {
@@ -87,6 +88,14 @@ function App() {
     getCategorySelected(value);
   };
 
+  const handlerSelectedTheme = (value: string) => {
+    getThemeSelected(value);
+  };
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", themeSelected);
+  }, [themeSelected]);
+
   return (
     <AppCont.Provider
       value={{
@@ -95,13 +104,15 @@ function App() {
         full_categories: full_categories,
         random_meals: random_meals,
         multisearch: inputSearchValue,
-        categorySelected: categorySelected
+        categorySelected: categorySelected,
       }}
     >
       <BrowserRouter>
         <Header
           handlerSearchValue={handlerSearchValue}
           headerSettings={headerSettings}
+          handlerSelectedTheme={handlerSelectedTheme}
+          themeSelected={themeSelected}
         />
         <Navigation
           getVisibilityOfHeaderAndFooter={getVisibilityOfHeaderAndFooter}

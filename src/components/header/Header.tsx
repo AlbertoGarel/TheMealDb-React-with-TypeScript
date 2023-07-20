@@ -12,6 +12,7 @@ import patron from "../../assets/img/header/patron_comida_small.png";
 
 import "./Header.scss";
 import SearchBar from "../searchBar/SearchBar";
+import CustomSelector from "../customSelector/CustomSelector";
 
 const images: { large: string; medium: string; small: string } = {
   large: `url(${big_burger})`,
@@ -22,11 +23,15 @@ const images: { large: string; medium: string; small: string } = {
 interface HeaderProps {
   handlerSearchValue: (param: string) => void;
   headerSettings: { isHidden: boolean; height: string };
+  handlerSelectedTheme: (param: string) => void;
+  themeSelected: string
 }
 
 export default function Header({
   handlerSearchValue,
   headerSettings,
+  handlerSelectedTheme,
+  themeSelected
 }: HeaderProps) {
   const navigate = useNavigate();
   const { breakpoint, deviceType } = useContext(AppCont);
@@ -55,7 +60,7 @@ export default function Header({
       <nav>
         <div
           id="container-logo"
-          style={{ width: deviceType === "small" ? "100%" : "30%" }}
+          style={{ width: deviceType === "small" ? "100%" : "30%"}}
           onClick={() => navigate("/")}
         >
           <img src={logo} alt="Logo TheMealDb" id="header-logo" />
@@ -63,13 +68,14 @@ export default function Header({
         </div>
         <div
           id="container-search"
-          style={{ width: deviceType === "small" ? "100%" : "60%" }}
+          style={{ width: deviceType === "small" ? "100%" : "60%", marginBottom: deviceType === "small" ? "5px" : "0px" }}
         >
+          <CustomSelector handlerSelectedTheme={handlerSelectedTheme} themeSelected={themeSelected}/>
           <SearchBar handlerSearchValue={handlerSearchValue} />
         </div>
       </nav>
       <div id="title">
-        <h1>Cómete la vida...</h1>
+        <h1>Delicious meals for you...</h1>
       </div>
       <div className="velo" />
     </header>
