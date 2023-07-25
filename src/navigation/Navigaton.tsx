@@ -9,7 +9,7 @@ import Search from "../pages/search";
 import Category from "../pages/category";
 
 interface NavigationProps {
-  getVisibilityOfHeaderAndFooter: any;
+  getVisibilityOfHeaderAndFooter: (param: any) => void;
   getNameCategorySelected: (param: string) => void;
 }
 
