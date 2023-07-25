@@ -1,0 +1,29 @@
+@import "../../assets/css/themes.css";
+
+label {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  #icon-search {
+    color: var(--title-color);
+    font-size: 30px;
+  }
+
+  input {
+    max-width: 300px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-color);
+    border-radius: var(--radius);
+    padding: 5px;
+
+    &:focus-visible {
+      outline: 1px solid var(--outline-color);
+      border-color: var(--title-color);
+    }
+
+    &:active {
+      border-color: var(--text-color);
+    }
+  }
+}

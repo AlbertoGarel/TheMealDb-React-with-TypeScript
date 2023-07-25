@@ -1,71 +1,114 @@
 [data-theme="light"] {
-  --primary: #ce7be5;
-  --secondary: #fca6aa;
-  --accent: #f97b27;
-  --neutral: #282532;
-  --base-100: #fcfcfd;
-  --info: #71b2d6;
-  --success: #167e60;
-  --warning: #a85705;
-  --error: #fd6888;
+  --bg-color: #ffffff;
+  --card-color: #f5f5f5;
+  --title-color: #ff7b00;
+  --text-color: #27313d;
+  --text-soft-color: #444b53;
+  --text-strong-color: #4a4a4a;
+  --subtle-color: #333333;
+  --border-color: #cfd0d2;
+  --shadow-color: #abc1dc;
+  --input-color: #ffffff;
+  --outline-color: #9dc3eb;
+  --mark-color: #4784b614;
+  --special-color: #4784b6;
+  --special-bg-color: #eaeaea;
+  --special-text-color: #ffffff;
+  --special-shadow-color: #475b71;
+  --special-mark-color: #4784b660;
+  --light-color: #eef4fc;
+  --dark-color: #37485a;
+  --nav-color: #00000030;
 }
 
 [data-theme="dark"] {
-  --primary: #f4e897;
-  --secondary: #66ef34;
-  --accent: #92b6e5;
-  --neutral: #15181e;
-  --base-100: #333638;
-  --info: #6985d3;
-  --success: #68eea0;
-  --warning: #f78b18;
-  --error: #fa806b;
-}
-
-[data-theme="light_dark"] {
-  --primary: #9bf2bb;
-  --secondary: #ffccf1;
-  --accent: #2323d3;
-  --neutral: #19161d;
-  --base-100: #e9ebf1;
-  --info: #7bb1ef;
-  --success: #25b16d;
-  --warning: #efc457;
-  --error: #e73c4d;
+  --bg-color: #2e2e2e;
+  --card-color: #292929;
+  --title-color: #ffffff;
+  --text-color: #ffffff;
+  --text-soft-color: #e7e7e7;
+  --text-strong-color: #b9b9b9;
+  --subtle-color: #f9f9f9;
+  --border-color: #b9b9b9;
+  --shadow-color: rgba(191, 191, 191, 1);
+  --input-color: rgba(255, 255, 255, 1);
+  --outline-color: #454545;
+  --mark-color: rgba(85, 85, 85, 0.08);
+  --special-color: rgba(85, 85, 85, 1);
+  --special-bg-color: rgba(88, 88, 88, 1);
+  --special-text-color: rgba(255, 255, 255, 1);
+  --special-shadow-color: rgba(49, 49, 49, 1);
+  --special-mark-color: #747474;
+  --light-color: rgba(243, 243, 243, 1);
+  --dark-color: rgba(71, 71, 71, 1);
+  --nav-color: #ffffff30;
 }
 
 [data-theme="pink"] {
-  --primary: #89e84e;
-  --secondary: #dbb260;
-  --accent: #7229aa;
-  --neutral: #312c3a;
-  --base-100: #eee3f3;
-  --info: #879dd9;
-  --success: #3cddc4;
-  --warning: #b56a08;
-  --error: #fa1933;
+  --bg-color: #feaebb;
+  --card-color: #ff899c;
+  --title-color: #793fed;
+  --text-color: rgba(79, 33, 48, 1);
+  --text-soft-color: rgba(99, 65, 74, 1);
+  --text-strong-color: rgba(74, 74, 74, 1);
+  --subtle-color: rgb(0, 0, 0);
+  --border-color: #fe7289;
+  --shadow-color: rgba(236, 175, 191, 1);
+  --input-color: rgba(255, 255, 255, 1);
+  --outline-color: #f68ab8;
+  --mark-color: rgba(255, 12, 133, 0.08);
+  --special-color: #ff0c85;
+  --special-bg-color: #ff4765;
+  --special-text-color: rgba(255, 255, 255, 1);
+  --special-shadow-color: rgba(130, 79, 94, 1);
+  --special-mark-color: #f65ccf50;
+  --light-color: rgba(255, 240, 243, 1);
+  --dark-color: rgb(101, 58, 71);
+  --nav-color: #00000030;
 }
 
 [data-theme="purple"] {
-  --primary: #bb00ea;
-  --secondary: #295884;
-  --accent: #528ab7;
-  --neutral: #1a232d;
-  --base-100: #4d3267;
-  --info: #748cf6;
-  --success: #115a2c;
-  --warning: #fccb1d;
-  --error: #ec4e4b;
+  --bg-color: #ffc1ff;
+  --card-color: #fbaefb;
+  --title-color: #8b8bff;
+  --text-color: #800080;
+  --text-soft-color: #c706a6;
+  --text-strong-color: rgba(74, 74, 74, 1);
+  --subtle-color: rgba(255, 248, 249, 1);
+  --border-color: #ffffff;
+  --shadow-color: #d055d8;
+  --input-color: rgba(255, 255, 255, 1);
+  --outline-color: #ffa5eb;
+  --mark-color: rgba(255, 27, 113, 0.08);
+  --special-color: rgba(255, 27, 113, 1);
+  --special-bg-color: #ff76ca;
+  --special-text-color: rgba(255, 255, 255, 1);
+  --special-shadow-color: rgba(129, 79, 90, 1);
+  --special-mark-color: #b44bb450;
+  --light-color: rgba(255, 240, 242, 1);
+  --dark-color: rgba(102, 58, 67, 1);
+  --nav-color: #00000030;
 }
 
 [data-theme="blue"] {
-  --primary: #c65447;
-  --secondary: #f9efa2;
-  --accent: #6dacff;
-  --neutral: #221d34;
-  --base-100: #2d2f62;
-  --info: #4685f1;
-  --success: #15a290;
-  --warning: #caac16;
-  --error: #e52e62;
+  --bg-color: #8b8da3;
+  --card-color: #bab9c4;
+  --title-color: #00155c;
+  --text-color: #ffffff;
+  --text-soft-color: #252a58;
+  --text-strong-color: #5d6786;
+  --subtle-color: rgba(249, 249, 254, 1);
+  --border-color: #e8e8e7;
+  --shadow-color: rgba(184, 188, 232, 1);
+  --input-color: rgba(255, 255, 255, 1);
+  --outline-color: #515784;
+  --mark-color: rgba(100, 119, 255, 0.08);
+  --special-color: #ecf2f0;
+  --special-bg-color: #bcb7c5;
+  --special-text-color: rgba(255, 255, 255, 1);
+  --special-shadow-color: rgba(87, 91, 129, 1);
+  --special-mark-color: #2e669650;
+  --light-color: rgba(242, 243, 255, 1);
+  --dark-color: rgba(61, 67, 116, 1);
+  --nav-color: #00000030;
 }

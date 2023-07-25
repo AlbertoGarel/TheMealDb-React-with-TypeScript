@@ -1,0 +1,115 @@
+@import "../../assets/css/index.css";
+@import "../../assets/css/themes.css";
+
+h2 {
+  text-align: center;
+  margin: 40px 0;
+}
+
+ul#list-data-meal {
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--card-color);
+
+  li {
+    margin: 5px;
+  }
+
+  li svg {
+    color: var(--special-mark-color);
+  }
+
+  li > span {
+    display: flex;
+    place-items: center;
+    gap: 5px;
+    color: var(--text-color);
+  }
+}
+
+#banner-container {
+  margin-bottom: 40px;
+  padding: 10px;
+  display: flex;
+  gap: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--card-color);
+  padding: 70px 0;
+
+  .action-box {
+    background-color: var(--special-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius);
+    padding: 10px 50px;
+
+    h5 {
+      margin: 10px 0;
+    }
+
+    a {
+      margin: 0px;
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .action-box#action-youtube a {
+    background-color: #ff0000;
+
+    svg {
+      color: var(--border-color);
+    }
+
+    &:hover {
+      background-color: var(--bg-color);
+
+      svg {
+        color: var(--outline-color);
+      }
+    }
+  }
+}
+
+#section-meal {
+  display: grid;
+
+  article:first-child {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    background-color: var(--card-color);
+
+    figure {
+      grid-area: 1/1/3/3;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    figure > img {
+      width: 100%;
+      height: auto;
+      display: flex;
+      border-radius: var(--radius);
+    }
+  }
+}

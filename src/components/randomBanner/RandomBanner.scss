@@ -1,0 +1,48 @@
+@import "../../assets/css/themes.css";
+@import "../../assets/css/fonts.css";
+
+#banner {
+  & > :first-child {
+    text-align: center;
+  }
+
+  #random-banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+    padding: 30px 10px;
+    background-color: var(--special-mark-color);
+
+    & > figure {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: auto;
+        display: flex;
+        margin: 20px;
+        border-radius: var(--radius);
+        box-shadow: 1px 1px 10px 0.5px black;
+      }
+    }
+  }
+
+  #content {
+    flex: 1;
+    margin: 20px;
+
+    hr {
+      margin: 20px 0;
+      border-color: var(--border-color);
+    }
+
+    ul {
+      list-style: none;
+    }
+  }
+}
